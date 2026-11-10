@@ -38,3 +38,7 @@ app_*backup*.py
 app_*stable.py
 qa_knowledge_*backup*.json
 qa_knowledge_*stable.json
+
+# Previous application versions
+app_before_*.py
+app_v3_working.py
