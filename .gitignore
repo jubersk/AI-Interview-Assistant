@@ -1,0 +1,40 @@
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Personal CVs and documents
+cvs/
+*.pdf
+*.docx
+
+# Audio and recordings
+*.wav
+*.mp3
+*.m4a
+*.mp4
+recordings/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.key
+*.pem
+
+# Local files
+.DS_Store
+*.log
+tmp/
+temp/
+
+# Generated backup files
+app_backup.py
+app_*backup*.py
+app_*stable.py
+qa_knowledge_*backup*.json
+qa_knowledge_*stable.json

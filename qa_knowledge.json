@@ -1,0 +1,333 @@
+{
+  "version": "1.2-quality-coverage",
+  "description": "Curated technical facts and must-cover checklists for local interview coaching. Not evidence of personal work.",
+  "entries": [
+    {
+      "id": "selenium_waits",
+      "title": "Selenium implicit and explicit waits",
+      "keywords": [
+        "implicit wait",
+        "explicit wait",
+        "webdriverwait",
+        "selenium waits",
+        "synchronization",
+        "implicit vs explicit",
+        "implicit and explicit",
+        "waits in selenium",
+        "wait in selenium",
+        "implicit",
+        "explicit",
+        "wait strategy"
+      ],
+      "facts": "Implicit wait is a WebDriver session timeout applied when finding elements (findElement/findElements), not a browser-level setting and not a wait for every page element or arbitrary condition. Explicit wait via WebDriverWait polls a specified condition (e.g. visibilityOfElementLocated or elementToBeClickable) until satisfied or timeout. Prefer explicit waits for dynamic UI and avoid mixing the two because compounded timeout behavior can be confusing.",
+      "must_cover": [
+        "Implicit: session-wide timeout for locating elements",
+        "Explicit: poll a specific condition",
+        "Prefer explicit for dynamic UI; avoid mixing waits"
+      ]
+    },
+    {
+      "id": "flaky_tests",
+      "title": "Flaky automation tests",
+      "keywords": [
+        "flaky",
+        "flakiness",
+        "unstable test",
+        "intermittent failure",
+        "test reliability"
+      ],
+      "facts": "Flaky tests intermittently pass or fail without a relevant application change. Reproduce and inspect logs, screenshots, synchronization, locator stability, shared data, environment, timing and parallel execution. Fix root causes with condition-based explicit waits, reliable locators, isolated data and cleanup. Retries can be temporary diagnostics or containment, not the primary fix; track recurring failure trends.",
+      "must_cover": [
+        "Diagnose using logs and reproduce failures",
+        "Fix synchronization, locators, data or environment root causes",
+        "Retries are temporary, not a substitute for a fix"
+      ]
+    },
+    {
+      "id": "rest_assured",
+      "title": "REST Assured API automation framework",
+      "keywords": [
+        "rest assured",
+        "restassured",
+        "api framework",
+        "api automation",
+        "rest api testing",
+        "rest assured framework architecture",
+        "rest assured architecture",
+        "api test architecture",
+        "restassured framework"
+      ],
+      "facts": "A maintainable REST Assured API test framework can use Java 11, Maven, TestNG, reusable request/response specifications, configuration, authentication helpers, payload builders, API clients, assertions and optional JSON schema validation. Allure can generate reports and CI/CD can execute suites. These are possible components, not proof they were all implemented. If a CV establishes TestNG, name TestNG for that candidate rather than saying TestNG or JUnit.",
+      "must_cover": [
+        "Modular request specification and test structure",
+        "Java, Maven, TestNG where documented",
+        "Assertions, reporting and CI/CD when supported by CV"
+      ]
+    },
+    {
+      "id": "testng",
+      "title": "TestNG testing framework",
+      "keywords": [
+        "testng",
+        "data provider",
+        "dataprovider",
+        "testng annotations",
+        "testng suite"
+      ],
+      "facts": "TestNG supports annotations such as @BeforeMethod and @Test, groups, priorities, dependencies, data-driven tests via @DataProvider, and parallel execution. Avoid depending on test order where possible. Maven Surefire can run suites and CI can publish reports."
+    },
+    {
+      "id": "cucumber",
+      "title": "Cucumber BDD",
+      "keywords": [
+        "cucumber",
+        "bdd",
+        "gherkin",
+        "feature file",
+        "step definition"
+      ],
+      "facts": "Cucumber uses Gherkin Given/When/Then scenarios mapped to step definitions. Keep scenarios business-readable, reusable and independent; Page Objects or API clients hold implementation details. BDD is collaboration around examples, not just a test automation tool."
+    },
+    {
+      "id": "selenium_pom",
+      "title": "Page Object Model and Selenium",
+      "keywords": [
+        "page object",
+        "pom",
+        "pagefactory",
+        "selenium framework",
+        "webdriver"
+      ],
+      "facts": "Page Object Model encapsulates page locators and interactions, separating UI implementation from test assertions and flows. Use explicit waits for relevant conditions, stable locators, and avoid exposing low-level WebElements unnecessarily. PageFactory is optional and not required for POM."
+    },
+    {
+      "id": "java_collections",
+      "title": "Java collections",
+      "keywords": [
+        "java collections",
+        "arraylist",
+        "linkedlist",
+        "treeset",
+        "hashset",
+        "list vs",
+        "linkedhashmap",
+        "treemap"
+      ],
+      "facts": "ArrayList is a resizable array implementation of List. TreeMap sorts keys; LinkedHashMap maintains insertion order by default. Use the dedicated HashMap versus ConcurrentHashMap reference for thread safety and null differences."
+    },
+    {
+      "id": "java_streams",
+      "title": "Java 8+ streams and Optional",
+      "keywords": [
+        "stream api",
+        "java streams",
+        "optional",
+        "lambda",
+        "functional interface"
+      ],
+      "facts": "Streams support declarative map/filter/reduce operations; intermediate operations are lazy until a terminal operation. Optional represents an optional result, not a replacement for every null. Avoid side effects in stream pipelines, particularly parallel streams."
+    },
+    {
+      "id": "java_oop",
+      "title": "Java OOP",
+      "keywords": [
+        "encapsulation",
+        "polymorphism",
+        "inheritance",
+        "abstraction",
+        "oops",
+        "oop concepts"
+      ],
+      "facts": "Encapsulation hides state behind methods; abstraction exposes essential behavior; inheritance models is-a relationships; polymorphism lets one interface dispatch different implementations. Favor composition over inheritance when relationships are not genuinely is-a."
+    },
+    {
+      "id": "api_testing",
+      "title": "API testing fundamentals",
+      "keywords": [
+        "status code",
+        "jsonpath",
+        "schema validation",
+        "api testing",
+        "postman",
+        "rest api",
+        "http methods"
+      ],
+      "facts": "API tests cover status codes, response contracts, schemas, headers, authentication, negative cases, idempotency, error handling and business rules. Validate behavior, not only HTTP 200. JSONPath extracts nested values; test isolation and environment configuration matter."
+    },
+    {
+      "id": "cicd",
+      "title": "CI/CD for test automation",
+      "keywords": [
+        "ci/cd",
+        "azure devops",
+        "jenkins",
+        "github actions",
+        "pipeline",
+        "continuous integration"
+      ],
+      "facts": "A CI pipeline can build code, run fast unit/API checks, execute suitable UI suites, publish reports and enforce quality gates. Use secure secrets, stable test environments and clear failure diagnostics. Long end-to-end suites can run in later stages or on schedules."
+    },
+    {
+      "id": "scrum_velocity",
+      "title": "Scrum velocity",
+      "keywords": [
+        "velocity",
+        "scrum velocity",
+        "team velocity",
+        "sprint velocity",
+        "velocity in scrum",
+        "completed story points"
+      ],
+      "facts": "Velocity is the amount of work COMPLETED during a sprint, commonly counted as story points of backlog items meeting the Definition of Done. It is an observed historical measure used to forecast team capacity; it is NOT an estimation technique. It should not be used to rank teams or individuals.",
+      "must_cover": [
+        "Completed work per sprint, commonly story points",
+        "Historical forecasting, not an estimation technique"
+      ]
+    },
+    {
+      "id": "scrum_events",
+      "title": "Scrum events",
+      "keywords": [
+        "scrum events",
+        "daily scrum",
+        "sprint review",
+        "retrospective",
+        "sprint retrospective"
+      ],
+      "facts": "Scrum events are the Sprint, Sprint Planning, Daily Scrum, Sprint Review and Sprint Retrospective. The Sprint is the container for the other events. Refinement is an ongoing activity, not a formally defined Scrum event."
+    },
+    {
+      "id": "test_strategy",
+      "title": "Test strategy and entry exit criteria",
+      "keywords": [
+        "test strategy",
+        "test plan",
+        "entry criteria",
+        "exit criteria",
+        "risk based testing",
+        "uat"
+      ],
+      "facts": "A test strategy defines scope, levels, approaches, environments, data, roles, risks, automation and reporting. Entry criteria may include build readiness and test data availability; exit criteria may include agreed coverage, acceptable defect risk and stakeholder sign-off. Criteria are tailored, not universal."
+    },
+    {
+      "id": "defect_management",
+      "title": "Critical defect before release",
+      "keywords": [
+        "critical defect",
+        "production release",
+        "severity",
+        "priority",
+        "go no go",
+        "defect triage"
+      ],
+      "facts": "For a release-blocking defect, confirm impact and reproducibility, triage severity and priority with stakeholders, communicate risk, assess workaround and fix options, verify remediation and regression, and support an evidence-based go/no-go decision. Do not unilaterally promise release safety.",
+      "must_cover": [
+        "Triage severity and business impact",
+        "Verify fix and regression",
+        "Escalate unacceptable residual risk for go/no-go decision"
+      ]
+    },
+    {
+      "id": "performance_testing",
+      "title": "Performance testing",
+      "keywords": [
+        "jmeter",
+        "loadrunner",
+        "performance test",
+        "load test",
+        "stress test",
+        "latency"
+      ],
+      "facts": "Load testing checks expected workload behavior; stress testing explores beyond expected capacity; soak testing looks for long-running degradation. Define realistic workload, throughput, latency percentiles, errors and infrastructure metrics; correlate bottlenecks across services."
+    },
+    {
+      "id": "hashmap_vs_concurrent",
+      "title": "HashMap versus ConcurrentHashMap",
+      "keywords": [
+        "hashmap vs concurrenthashmap",
+        "hashmap and concurrenthashmap",
+        "hashmap versus concurrenthashmap",
+        "hash map vs concurrenthashmap",
+        "hash map vs concurrent hash map",
+        "hash map versus concurrent hash map",
+        "concurrenthashmap",
+        "concurrent hash map",
+        "hashmap",
+        "hash map"
+      ],
+      "facts": "HashMap is NOT thread-safe; it allows one null key and multiple null values. ConcurrentHashMap supports safe concurrent operations across threads and does NOT allow null keys or null values. Use HashMap for non-concurrent maps; use ConcurrentHashMap for shared maps updated or read concurrently. ConcurrentHashMap individual operations are thread-safe; compound read-modify-write sequences may require compute, merge, or other atomic methods.",
+      "must_cover": [
+        "HashMap not thread-safe; ConcurrentHashMap thread-safe",
+        "HashMap permits null key/values; ConcurrentHashMap forbids null",
+        "Single-thread versus concurrent shared use case"
+      ]
+    },
+    {
+      "id": "scrum_estimation",
+      "title": "Agile estimation techniques",
+      "keywords": [
+        "planning poker",
+        "estimation technique",
+        "estimation methods",
+        "relative estimation",
+        "t shirt sizing",
+        "fibonacci estimation",
+        "story point estimation"
+      ],
+      "facts": "Planning Poker, affinity estimation, and T-shirt sizing are relative estimation techniques; story points express relative effort/complexity/uncertainty. Estimation is different from velocity: velocity is measured AFTER completion of sprint work and used for forecasting.",
+      "must_cover": [
+        "Planning Poker is an estimation technique",
+        "Velocity is a completed-work measure, not estimation"
+      ]
+    },
+    {
+      "id": "java_hashmap_internal",
+      "title": "HashMap internal working",
+      "keywords": [
+        "hashmap internal",
+        "hashmap working",
+        "hashing collision",
+        "hashmap bucket",
+        "hashmap resize"
+      ],
+      "facts": "HashMap uses hashing to select buckets. Keys with colliding hashes are resolved by equality checks; Java 8+ may treeify heavily populated buckets under qualifying conditions. Resizing rehashes entries across a larger table. Do not claim iteration order is guaranteed."
+    },
+    {
+      "id": "api_auth",
+      "title": "API authentication and authorization testing",
+      "keywords": [
+        "oauth",
+        "bearer token",
+        "authentication testing",
+        "authorization testing",
+        "401 vs 403",
+        "jwt testing"
+      ],
+      "facts": "Test authentication (identity) separately from authorization (permissions). HTTP 401 indicates missing or invalid authentication credentials; 403 indicates the server understands the request but refuses it. Check expired tokens, missing scopes, role boundaries, and sensitive data exposure."
+    },
+    {
+      "id": "java_string",
+      "title": "String, StringBuilder and StringBuffer",
+      "keywords": [
+        "stringbuilder",
+        "stringbuffer",
+        "string pool",
+        "string immutable",
+        "string vs stringbuilder"
+      ],
+      "facts": "String is immutable; concatenation creates new string values. StringBuilder is mutable and not synchronized, generally preferred for repeated concatenation within a thread. StringBuffer is mutable with synchronized methods, but synchronization alone does not make every compound workflow atomic. String literals may be interned in the string pool."
+    },
+    {
+      "id": "api_framework_layers",
+      "title": "API test framework architecture patterns",
+      "keywords": [
+        "framework layers",
+        "api client layer",
+        "request specification",
+        "response specification",
+        "api framework design"
+      ],
+      "facts": "Separate test scenarios/assertions from reusable HTTP clients/request specifications, environment configuration, authentication, payload/test-data factories, and reporting. Only describe these as personal implementations if CV or supplied project evidence confirms them."
+    }
+  ]
+}
