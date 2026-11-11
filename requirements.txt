@@ -1,0 +1,6 @@
+streamlit
+ollama
+pypdf
+numpy
+scipy
+faster-whisper

@@ -14,7 +14,7 @@ MODEL = "llama3.2"
 OLLAMA_HOST = "http://127.0.0.1:11434"
 BASE_DIR = Path(__file__).resolve().parent
 CV_DIR = BASE_DIR / "cvs"
-MASTER_CV_NAME = "Juber_Shaikh_Master_CV.pdf"
+MASTER_CV_NAME = "Master_CV.pdf"
 KNOWLEDGE_PATH = BASE_DIR / "qa_knowledge.json"
 CV_DIR.mkdir(parents=True, exist_ok=True)
 
